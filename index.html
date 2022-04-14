@@ -1,64 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Jogo da Velha</title>
+  </head>
+  <body>
+    <header>
+      <h1>Jogo da Velha</h1>
+    </header>
+    <div class="row">
+      <main>
+        <section>
+          <div id="0" class="square" onclick="selectSquare(this.id)">-</div>
+          <div id="1" class="square" onclick="selectSquare(this.id)">-</div>
+          <div id="2" class="square" onclick="selectSquare(this.id)">-</div>
+        </section>
+        <section>
+          <div id="3" class="square" onclick="selectSquare(this.id)">-</div>
+          <div id="4" class="square" onclick="selectSquare(this.id)">-</div>
+          <div id="5" class="square" onclick="selectSquare(this.id)">-</div>
+        </section>
+        <section>
+          <div id="6" class="square" onclick="selectSquare(this.id)">-</div>
+          <div id="7" class="square" onclick="selectSquare(this.id)">-</div>
+          <div id="8" class="square" onclick="selectSquare(this.id)">-</div>
+        </section>
+      </main>
+      <aside>
+        <section class="scoreboard">
+          <label>Jogador:</label>
+          <label id="player"></label>
+        </section>
+        <section class="scoreboard">
+          <label>Vencedor:</label>
+          <label id="winner"></label>
 
-<head>
-    <title>
-        Jogo da velha
-    </title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="estilo.css">
-</head>
-
-<body>
-
-<h1>
-    Jogo da Velha
-</h1>
-
-<div>
-    <div id="1" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-    <div id="2" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-    <div id="3" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-</div>
-
-<div>
-    <div id="4" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-    <div id="5" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-    <div id="6" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-</div>
-
-<div>
-    <div id="7" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-    <div id="8" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-    <div id="9" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-</div>
-
-<div class="jogador">
-    <label>
-        Jogador:
-    </label>
-    <label id="jogador-selecionado">
-
-    </label>
-</div>
-
-<div class="vencedor">
-    <label>
-        Vencedor:
-    </label>
-    <label id="vencedor-selecionado">
-
-    </label>
-</div>
-
-<div>
-    <button onclick="reiniciar()">
-        Reiniciar
-    </button>
-</div>
-
-</body>
-
-<script src="velha.js"></script>
-
+          <section class="scoreboard container">
+            <h5>Pontuação:</h5>
+              <div class="row">
+                <div class="content">
+                  <label>X:</label>
+                  <label id="pointX"></label>
+                </div>
+                <div class="content">
+                  <label>O:</label>
+                  <label id="pointO"></label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="content">
+                  <label>Velhas:</label>
+                  <label id="pointOld"></label>
+                </div>
+              </div>
+          </section>
+        </section>
+        <section>
+          <nav>
+            <button onclick="newGame()">Novo Jogo</button>
+            <button onclick="emptyScoreboard()">Zerar placar</button>
+          </nav>
+        </section>
+      </aside>
+    </div>
+  </body>
+  <script src="./script.js"></script>
 </html>
