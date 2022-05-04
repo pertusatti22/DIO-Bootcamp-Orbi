@@ -1,0 +1,71 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(25, 41, 41);
+}
+
+#main-play-area {
+    background-color: black;
+    background-image: url("./assets/images/space.png");
+    height: 80vh;
+    width: 600px;
+
+}
+
+.game-instructions {
+    position: relative;
+    color: white;
+    left: 8rem;
+    top: 0px;
+}
+
+.start-button {
+    position: relative;
+    color: white;
+    top: 15rem;
+    left: 18rem;
+    cursor: pointer;
+}
+
+
+.player {
+    position: relative;
+    height: 60px;
+    width: auto;
+    left: 280px;
+    top: 600px;
+
+}
+
+.laser {
+    position: relative;
+    color: white;
+    content: "teste";
+    width: 8px;
+    height: auto;
+}
+
+.enemy {
+    height: auto;
+    width: 50px;
+    position: relative;
+}
+
+.enemy-transition {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+
+}
+
+.enemy-destroy {
+    height: 80px;
+    width: auto;
+    position: relative;
+    opacity: 0;
+}

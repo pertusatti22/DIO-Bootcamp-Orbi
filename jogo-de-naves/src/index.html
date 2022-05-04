@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rescue Team I</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="game">
+        <div id="newGame">
+          <h1>Rescue Team I</h1>
+          <p>
+            W -> Up<br />
+            S -> Down<br />
+            D -> Fire
+          </p>
+          <button onclick="engine()">Play Game!</button>
+        </div>
+      </div>
+    </div>
+    <audio src="../assets/sounds/sound.mp3" preload="auto" id="audio-Shoot"></audio>
+    <audio src="../assets/sounds/explosion.mp3" preload="auto" id="audio-Explosion"></audio>
+    <audio src="../assets/sounds/ambiental.mp3" preload="auto" id="audio-Ambiental"></audio>
+    <audio src="../assets/sounds/gameover.mp3" preload="auto" id="audio-GameOver"></audio>
+    <audio src="../assets/sounds/lose.mp3" preload="auto" id="audio-Dead"></audio>
+    <audio src="../assets/sounds/rescue.mp3" preload="auto" id="audio-Rescue"></audio>
+    <script src="./script.js"></script>
+    <script src="../assets/libraries/jquery-1.11.1.min.js"></script>
+    <script src="../assets/libraries/jquery-collision.min.js"></script>
+  </body>
+</html>
